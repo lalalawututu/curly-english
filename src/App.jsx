@@ -1,6 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './common/header';
+import { IntlProvider } from 'react-intl';
+import { Button } from 'antd';
 // import store from './store';
 import './App.less';
 
@@ -9,9 +12,7 @@ function App() {
     // <Provider store={store}>
     <Provider>
       <BrowserRouter>
-        <div>
-          123
-        </div>
+        <Header />
       </BrowserRouter>
     </Provider>
   );

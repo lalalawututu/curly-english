@@ -6,7 +6,7 @@ module.exports = {
       plugin: CracoLessPlugin,
       options: {
         lessLoaderOptions: {
-          modifyVars: { 
+          modifyVars: {
             '@primary-color': '#b7eb8f', // 全局主色
             '@link-color': '#52c41a', // 链接色
             '@success-color': '#52c41a', // 成功色

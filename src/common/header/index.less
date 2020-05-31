@@ -1,0 +1,340 @@
+.header {
+  width: 100%;
+  height: 0.6rem;
+  min-width: 1400px;
+  .headerBox {
+    width: 100%;
+    min-width: 1400px;
+    position: fixed;
+    z-index: 99;
+    font-size: 0.18rem;
+    background: #16544F;
+    color: white;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.40);
+    div{
+      height: 0.6rem;
+    }
+    .sicboLogo {
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+    .headerName {
+      cursor: pointer;
+      span {
+        color: white;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+    }
+    .headerNameActive {
+      cursor: pointer;
+      span {
+        color: #F56014;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+    }
+
+    //metamaskTutorial
+    .toggleTutorial {
+      cursor: pointer;
+      span {
+        color: white;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+      .arrow {
+        display: inline-block;
+        width: 0.14rem;
+        height: 0.08rem;
+        background: url('../../style/img/header/ArrowDown.png') no-repeat;
+        background-size: 0.14rem 0.08rem;
+        vertical-align: middle;
+        margin-left: 0.1rem;
+        transition: 0.5s;
+      }
+      .languageList {
+        height: 0;
+        transition: 0.3s;
+        li {
+          display: none;
+          transition: 0.5s;
+          color: transparent;
+          font-size: 0.18rem;
+        }
+        li:hover{
+          color: #F56014;
+        }
+      }
+    }
+    .toggleTutorialActive {
+      cursor: pointer;
+      span {
+        color: #F56014;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+      .arrow {
+        display: inline-block;
+        width: 0.14rem;
+        height: 0.08rem;
+        background: url('../../style/img/header/ArrowUpOrange.png') no-repeat;
+        background-size: 0.14rem 0.08rem;
+        vertical-align: middle;
+        margin-left: 0.1rem;
+        transition: 0.5s;
+      }
+      .languageList {
+        display: block;
+        height: 1.08rem;
+        background: #103835;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.40);
+        border-radius: 0.06rem;
+        margin-top: -0.15rem;
+        transition: 0.3s;
+        li {
+          display: block;
+          height: 0.36rem;
+          line-height: 0.36rem;
+          color: #ffffff;
+          font-size: 0.18rem;
+          transition: 0.5s;
+          span{
+            color: #ffffff;
+          }
+        }
+        li:hover {
+          span{
+            color: #F56014;
+          }
+        }
+      }
+    }
+
+    //chat
+    .toggleChat {
+      cursor: pointer;
+      span {
+        color: white;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+      .arrow {
+        display: inline-block;
+        width: 0.14rem;
+        height: 0.08rem;
+        background: url('../../style/img/header/ArrowDown.png') no-repeat;
+        background-size: 0.14rem 0.08rem;
+        vertical-align: middle;
+        margin-left: 0.1rem;
+        transition: 0.5s;
+      }
+      .languageList {
+        height: 0;
+        transition: 0.3s;
+        li {
+          display: none;
+          transition: 0.5s;
+          color: transparent;
+          font-size: 0.18rem;
+        }
+        li:hover{
+          color: #F56014;
+        }
+      }
+    }
+    .toggleChatActive {
+      cursor: pointer;
+      span {
+        color: #F56014;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+      .arrow {
+        display: inline-block;
+        width: 0.14rem;
+        height: 0.08rem;
+        background: url('../../style/img/header/ArrowUpOrange.png') no-repeat;
+        background-size: 0.14rem 0.08rem;
+        vertical-align: middle;
+        margin-left: 0.1rem;
+        transition: 0.5s;
+      }
+      .languageList {
+        display: block;
+        height: 2.16rem;
+        background: #103835;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.40);
+        border-radius: 0.06rem;
+        margin-top: -.15rem;
+        transition: 0.3s;
+        min-width: 1.4rem;
+        li {
+          display: block;
+          width: 1.2rem;
+          margin: 0 auto;
+          height: 0.36rem;
+          line-height: 0.36rem;
+          color: #ffffff;
+          font-size: 0.18rem;
+          text-align: left;
+          transition: 0.5s;
+          span{
+            color: white;
+          }
+          .discordImg{
+            display: inline-block;
+            width: 0.14rem;
+            height: 0.16rem;
+            margin-right: 0.13rem;
+            vertical-align: middle;
+            background: url('../../style/img/header/discord.png') no-repeat;
+            background-size: 0.14rem 0.16rem;
+          }
+          .twitterImg{
+            display: inline-block;
+            width: 0.18rem;
+            height: 0.16rem;
+            margin-right: 0.13rem;
+            vertical-align: middle;
+            background: url('../../style/img/header/Twitter_Menu_White.png') no-repeat;
+            background-size: 0.18rem 0.16rem;
+          }
+          .telegramImg{
+            display: inline-block;
+            width: 0.16rem;
+            height: 0.16rem;
+            margin-right: 0.13rem;
+            vertical-align: middle;
+            background: url('../../style/img/header/Telegram_Menu_White.png') no-repeat;
+            background-size: 0.16rem 0.16rem;
+          }
+          .QQImg{
+            display: inline-block;
+            width: 0.18rem;
+            height: 0.16rem;
+            margin-right: 0.13rem;
+            vertical-align: middle;
+            background: url('../../style/img/header/QQ_BottomBar_White.png') no-repeat;
+            background-size: 0.16rem 0.18rem;
+          }
+          .weChatImg{
+            display: inline-block;
+            width: 0.2rem;
+            height: 0.16rem;
+            margin-right: 0.13rem;
+            vertical-align: middle;
+            background: url('../../style/img/header/WeChat_Menu_White.png') no-repeat;
+            background-size: 0.2rem 0.16rem;
+          }
+          .weiboImg{
+            display: inline-block;
+            width: 0.18rem;
+            height: 0.16rem;
+            margin-right: 0.13rem;
+            vertical-align: middle;
+            background: url('../../style/img/header/Weibo_BottomBar_White.png') no-repeat;
+            background-size: 0.18rem 0.16rem;
+          }
+        }
+        li:hover {
+          color: #F56014;
+          span{
+            color: #F56014;
+          }
+          .discordImg{
+            background: url('../../style/img/header/discord_Menu_Orange.png') no-repeat;
+          }
+          .twitterImg{
+            background: url('../../style/img/header/Twitter_Menu_Orange.png') no-repeat;
+          }
+          .telegramImg{
+            background: url('../../style/img/header/Telegram_Menu_Orange.png') no-repeat;
+          }
+          .QQImg{
+            background: url('../../style/img/header/QQ_BottomBar_Orange.png') no-repeat;
+          }
+          .weChatImg{
+            background: url('../../style/img/header/WeChat_Menu_Orange.png') no-repeat;
+          }
+          .weiboImg{
+            background: url('../../style/img/header/Weibo_BottomBar_Orange.png') no-repeat;
+          }
+        }
+      }
+    }
+    //language
+    .toggleLanguage {
+      cursor: pointer;
+      span {
+        color: white;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+      .arrow {
+        display: inline-block;
+        width: 0.14rem;
+        height: 0.08rem;
+        background: url('../../style/img/header/ArrowDown.png') no-repeat;
+        background-size: 0.14rem 0.08rem;
+        vertical-align: middle;
+        margin-left: 0.1rem;
+        transition: 0.5s;
+      }
+      .languageList {
+        height: 0;
+        transition: 0.3s;
+        li {
+          display: none;
+          transition: 0.5s;
+          color: transparent;
+          font-size: 0.18rem;
+        }
+        li:hover{
+          color: #F56014;
+        }
+      }
+    }
+    .toggleLanguageActive {
+      cursor: pointer;
+      span {
+        color: #F56014;
+        font-size: 0.18rem;
+        transition: 1s;
+      }
+      .arrow {
+        display: inline-block;
+        width: 0.14rem;
+        height: 0.08rem;
+        background: url('../../style/img/header/ArrowUpOrange.png') no-repeat;
+        background-size: 0.14rem 0.08rem;
+        vertical-align: middle;
+        margin-left: 0.1rem;
+        transition: 0.5s;
+      }
+      .languageList {
+        display: block;
+        height: 0.72rem;
+        background: #103835;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.40);
+        border-radius: 0.06rem;
+        margin-top: -0.15rem;
+        transition: 0.3s;
+        li {
+          display: block;
+          height: 0.36rem;
+          line-height: 0.36rem;
+          color: #ffffff;
+          font-size: 0.18rem;
+          transition: 0.5s;
+        }
+        li:hover {
+          color: #F56014;
+        }
+      }
+    }
+  }
+}
