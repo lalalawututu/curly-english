@@ -1,20 +1,20 @@
 import React, { PureComponent } from 'react';
-import { Row, Col } from 'antd';
-import { FormattedMessage } from 'react-intl';
+import { Menu, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import en_US from '../../locale/en_US';
-import zh_CN from '../../locale/zh_CN';
-import './index.less';
 import { actionCreatorsHeader } from './store';
+import { BankFilled, TeamOutlined, NotificationFilled } from '@ant-design/icons';
+import './index.less';
 
 class Header extends PureComponent{
   constructor(props) {
     super(props);
     this.state = {
-      left: 0
+      left: 0,
+      current: 'homePage',
     }
   }
+
   componentDidMount() {
     let that = this;
     window.onscroll = function () {
@@ -24,190 +24,57 @@ class Header extends PureComponent{
         left: left
       });
     }
-    this.props.chooseLanguage(zh_CN);
   }
+
+  handleClick = e => {
+    console.log('click ', e);
+    this.setState({
+      current: e.key,
+    });
+  }
+
   render(){
     const {
-      chooseLanguage,
       headPicture,
-      handleToggleLanguage, 
-      toggleLanguage, 
-      handleToggleChat,
-      handleToggleReferral,
-      toggleBBT,
-      toggleChat,
-      handlePicture,
-      toggleTutorial,
-      handleToggleTutorial,
-      handleToggleBBT,
-      toggleReferal,
-      toggleHow,
-      handleToggleHow
     } = this.props;
     return (
-      <div className="header">
-        <div className="headerBox" style={{left: this.state.left}}>
-          <Row>
-            <Col span={1} />
-            <Col span={2}>
-              <Link to="/">
-                <img className={this.state.headPictureC ? "doudizhuLogo" : "doudizhuLogoEn"} src={headPicture} alt="" />
-              </Link>
-            </Col>
-            <Col span={1}></Col>
-            <Col span={3} onClick={handleToggleHow}>
-              <div className={toggleHow ? "headerName" : "headerNameActive"}>
-                <FormattedMessage
-                  id='HowToPlay'
-                  defaultMessage="HOW TO PLAY"
-                />
-              </div>
-            </Col>
-            <Col span={3} onClick={handleToggleReferral}>
-              <div className={toggleReferal ? "headerName" : "headerNameActive"}>
-                <FormattedMessage
-                  id='referral'
-                  defaultMessage="REFERRAL"
-                />
-              </div>
-            </Col>
-            <Col span={3} onClick={handleToggleBBT}>
-              <div className={toggleBBT ? "headerName" : "headerNameActive"}>
-                <FormattedMessage
-                  id='BBTDividend'
-                  defaultMessage="BBT Dividend"
-                />
-              </div>
-            </Col>
-            <Col span={3} onClick={handleToggleTutorial}>
-              <div className={toggleTutorial ? "toggleTutorial" : "toggleTutorialActive"}>
-                <FormattedMessage
-                  id='TutorialText'
-                  defaultMessage="English"
-                  className="language"
-                />
-                <div className="arrow"></div>
-                <ul className="languageList">
-                  <li>
-                    <FormattedMessage
-                      id='DownloadText2'
-                      defaultMessage="BBT Dividend"
-                    />
-                  </li>
-                  <li>
-                    <FormattedMessage
-                      id='TutorialText'
-                      defaultMessage="BBT Dividend"
-                    />
-                  </li>
-                  <li>
-                    <FormattedMessage
-                      id='SaveGas'
-                      defaultMessage="BBT Dividend"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </Col>
-            <Col span={3} />
-            <Col span={2} onClick={handleToggleChat}>
-              <div className={toggleChat ? "toggleChat" : "toggleChatActive"}>
-                <FormattedMessage
-                  id='chat'
-                  defaultMessage="English"
-                  className="language"
-                />
-                <div className="arrow"></div>
-                <ul className="languageList">
-                  <li>
-                    <div className="discordImg"></div>
-                    <span>
-                      Discord
-                    </span>
-                  </li>
-                  <li>
-                    <div className="twitterImg"></div>
-                    <span>
-                      Twitter
-                    </span>
-                  </li>
-                  <li>
-                    <div className="telegramImg"></div>
-                    Telegram
-                  </li>
-                  <li>
-                    <div className="QQImg"></div>
-                    QQ
-                  </li>
-                  <li>
-                    <div className="weChatImg"></div>
-                    WeChat
-                  </li>
-                  <li>
-                    <div className="weiboImg"></div>
-                    Weibo
-                  </li>
-                </ul>
-              </div>
-            </Col>
-            <Col span={2} onClick={handleToggleLanguage}>
-              <div className={toggleLanguage ? "toggleLanguage" : "toggleLanguageActive"}>
-                <FormattedMessage
-                  id='language'
-                  defaultMessage="English"
-                  className="language"
-                />
-                <div className="arrow"></div>
-                <ul className="languageList">
-                  <li onClick={() => { chooseLanguage(zh_CN); handlePicture('zh_CN');}}>简体中文</li>
-                  <li onClick={() => { chooseLanguage(en_US); handlePicture('en_US');}}>English</li>
-                </ul>
-              </div>
-            </Col>
-            <Col span={1} />
-          </Row>
-        </div>
+      <div className="headerBox" style={{left: this.state.left}}>
+        <Row>
+          <Col span={1} ></Col>
+          <Col span={2}>
+            <Link className="logolink" to="/">
+              <img className="logoPic" src={headPicture} alt="" />
+            </Link>
+          </Col>
+          <Col span={1} ></Col>
+          <Col span={1} ></Col>
+          <Col span={12} gutter={12}>
+            <Menu className="menuBox" onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+              <Menu.Item key="homePage" icon={<BankFilled />}>
+                首页
+              </Menu.Item>
+              <Menu.Item key="teacherPage" icon={<TeamOutlined />}>
+                教师信息
+              </Menu.Item>
+              <Menu.Item key="cooperationPage" icon={<NotificationFilled />}>
+                商家合作
+              </Menu.Item>
+            </Menu>
+          </Col>
+        </Row>
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  toggleReferal: state.getIn(['header', 'toggleReferal']),
-  toggleHow: state.getIn(['header', 'toggleHow']),
-  toggleBBT: state.getIn(['header', 'toggleBBT']),
-  toggleTutorial: state.getIn(['header', 'toggleTutorial']),
-  toggleLanguage: state.getIn(['header', 'toggleLanguage']),
-  toggleChat: state.getIn(['header', 'toggleChat']),
   headPicture: state.getIn(['header', 'headPicture']),
-  language: state.getIn(['header', 'language']),
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleToggleHow() {
-      dispatch(actionCreatorsHeader.toggleHow());
-    },
-    handleToggleReferral() {
-      dispatch(actionCreatorsHeader.toggleReferral());
-    },
-    handleToggleBBT() {
-      dispatch(actionCreatorsHeader.handleToggleBBT());
-    },
-    handleToggleTutorial() {
-      dispatch(actionCreatorsHeader.toggleTutorial());
-    },
-    handleToggleLanguage() {
-      dispatch(actionCreatorsHeader.toggleLanguage());
-    },
-    handleToggleChat() {
-      dispatch(actionCreatorsHeader.toggleChat());
-    },
-    handlePicture(language) {
-      dispatch(actionCreatorsHeader.toggleLogo(language));
-    },
-    chooseLanguage(language) {
-      dispatch(actionCreatorsHeader.getLanguageInfo(language));
+    handlePicture() {
+      dispatch(actionCreatorsHeader.toggleLogo());
     }
   }
 }
