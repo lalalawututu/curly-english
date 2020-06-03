@@ -61,6 +61,7 @@ class Header extends PureComponent{
               </Menu.Item>
             </Menu>
           </Col>
+          <Col span={7}></Col>
         </Row>
       </div>
     )

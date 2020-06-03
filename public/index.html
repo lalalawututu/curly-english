@@ -26,6 +26,23 @@
     -->
     <title>React App</title>
   </head>
+  <script>
+    (function(){
+        function w() {
+        var r = document.documentElement;
+        var a = r.getBoundingClientRect().width;//获取当前设备的宽度
+            if (a > 720 ){//720不固定，根据设计稿的宽度定
+                a = 720;
+            } 
+            rem = a / 7.2;
+            r.style.fontSize = rem + "px"
+        }
+        w();
+        window.addEventListener("resize", function() {//监听横竖屏切换
+            w()
+        }, false);
+    })();
+  </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
