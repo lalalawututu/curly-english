@@ -4,16 +4,11 @@ import zh_CN from '../../../locale/zh_CN';
 // import en_US from '../../../locale/en_US';
 
 const defaultState = fromJS({
-  headPicture: require('../../../style/header/logotext.png'),
-  logo: require('../../../style/header/logo.jpg'),
+  teacher1: require('../../../style/teacher/Dusan.jpg'),
 });
 
 export default (state = defaultState, action) => {
   switch(action.type) {
-    case constants.LOGO:
-      return state.set(
-        'headPicture', require('../../../style/header/logotext.png'),
-      );
     default:
       return state;
   }

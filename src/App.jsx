@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './common/header';
 import Home from './component/home';
+import Teacher from './component/teacher';
 import { connect } from 'react-redux';
 import { IntlProvider } from 'react-intl';
 import { Button } from 'antd';
@@ -15,6 +16,7 @@ function App() {
       <div>
         <Header />
         <Route path="/" exact component={(props) => <Home { ...props }/>}></Route>
+        <Route path="/teacher" exact component={(props) => <Teacher { ...props }/>}></Route>
       </div>
     </BrowserRouter>
   );

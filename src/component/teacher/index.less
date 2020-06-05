@@ -1,0 +1,126 @@
+.teacherBox{
+  width: 100%;
+  padding-top: 0.56rem;
+  height: 12rem;
+  .worldMap{
+    position: fixed;
+    z-index: -1;
+    top: 0.2rem;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../style/teacher/map.png);
+    opacity: 0.3;
+    mix-blend-mode: luminosity;
+    background-position: 50% 40px;
+    background-repeat: no-repeat;
+    will-change: transform;
+  }
+  .teacherIntroduce{
+    position: relative;
+    width: 100%;
+    height: 7.5rem;
+    background: rgba(86, 220, 13, 0.7);
+    .logo{
+      width: 60%;
+      margin: 0.5rem auto 0;
+      img{
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0 auto;
+      }
+    }
+    .headText{
+      margin: 0.4rem auto 0.3rem;
+      color: #1f1d1d;
+      text-align: center;
+      font-size: 0.36rem;
+      font-weight: bold;
+    }
+    .headContent{
+      text-align: center;
+      margin-bottom: 0.15rem;
+      color: #1f1d1d;
+      font-weight: bold;
+      font-size: 0.24rem;
+    }
+  }
+  .teacherIntroduce2{
+    position: relative;
+    background: white;
+    .headText{
+      margin: 0.4rem auto 0.3rem;
+      color: #1f1d1d;
+      text-align: center;
+      font-size: 0.36rem;
+      font-weight: bold;
+    }
+    .headContent{
+      text-align: center;
+      margin-bottom: 0.15rem;
+      color: #1f1d1d;
+      font-weight: bold;
+      font-size: 0.24rem;
+    }
+  }
+  .teacherInformationBox{
+    background: #fa8c16;
+    .teacherSBox{
+      margin: 0.5rem auto;
+      padding: 0.5rem 0.3rem;
+      background: white;
+      border-radius: 0.1rem;
+      box-shadow: 0 0.15rem 0.4rem -0.3rem;
+      transition: transform .35s ease,box-shadow .35s ease;
+      cursor: pointer;
+      img{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+      }
+      @keyframes outAmination {
+        0% {box-shadow: 0 0 0 5 rgba(250, 140, 22, 0.8);}
+        70% {box-shadow: 0 0 0 10px rgba(250, 140, 22, 0.6);}
+        100% {box-shadow: 0 0 0 40px rgba(250, 140, 22, 0.1);}
+      }
+      @-webkit-keyframes outAmination {
+        0% {box-shadow: 0 0 0 5 rgba(26, 112, 234 0.8);}
+        70% {box-shadow: 0 0 0 10px rgba(250, 140, 22, 0.6);}
+        100% {box-shadow: 0 0 0 40px rgba(250, 140, 22, 0.1);}
+      }
+      .textIn{
+        display: inline-block;
+        height: 2rem;
+        vertical-align: bottom;
+        margin-left: 0.3rem;
+        .Name{
+          color: #fa8c16;
+          font-size: 0.28rem;
+          line-height: 1;
+          margin-bottom: 0.08rem;
+          font-weight: bold;
+        }
+        .country{
+          color: rgb(119, 119, 119);
+          line-height: 1.2;
+          font-size: 0.2rem;
+        }
+        .information{
+          color: black;
+          line-height: 1.5;
+          font-size: 0.16rem;
+        }
+      }
+      &:hover{
+        box-shadow: 0 8px 24px 0 rgba(0,0,0,.16);
+        transform: translateY(-.1rem);
+        img{
+          animation:outAmination 1s infinite;
+          -moz-animation:outAmination 1s infinite; /* Firefox */
+          -webkit-animation:outAmination 1s infinite; /* Safari and Chrome */
+          -o-animation:outAmination 1s infinite; /* Opera */
+        }
+      }
+    }
+  }
+}

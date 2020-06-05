@@ -51,10 +51,14 @@ class Header extends PureComponent{
           <Col span={12} gutter={12}>
             <Menu className="menuBox" onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
               <Menu.Item key="homePage" icon={<BankFilled />}>
-                首页
+                <Link className="logolink" to="/" style={{ display: 'inherit' }}>
+                  首页
+                </Link>
               </Menu.Item>
               <Menu.Item key="teacherPage" icon={<TeamOutlined />}>
-                教师信息
+                <Link className="logolink" to="/teacher" style={{ display: 'inherit' }}>
+                  教师信息
+                </Link>
               </Menu.Item>
               <Menu.Item key="cooperationPage" icon={<NotificationFilled />}>
                 商家合作

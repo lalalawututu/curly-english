@@ -10,7 +10,6 @@ class Home extends PureComponent{
   constructor(props) {
     super(props);
     this.state = {
-      scrollWidth: 0,
       current: 'homePage',
     }
   }
@@ -31,14 +30,13 @@ class Home extends PureComponent{
       carouselPic1,
       carouselPic2,
       carouselPic3,
-    } = this.props
-    const {
       scrollWidth
-    } = this.state
+    } = this.props
+    console.log(scrollWidth)
     return (
       <div className="homeBox">
         <div className="kong"> 123  </div>
-        <Carousel autoplay autoplaySpeed={5000}>
+        <Carousel autoplay autoplaySpeed={5000} dots={false} effect="fade" easing>
           <div>
             <img className="carouselPic" src={carouselPic1} alt=""/>
           </div>
@@ -57,31 +55,144 @@ class Home extends PureComponent{
           </div>
           <div className="whyLearnIntroduce">“小卷毛”课程体系，是以正宗的美国课堂为蓝本，结合中国孩子的教育现状及特点，量身定制的最适合中国孩子学习的课程——国际公民课程。采用家庭化场景教学，课堂是日常的生活环境，比如客厅、公园、餐厅。外教不仅是授课老师，还是孩子的生活伙伴。</div>
         </div>
-        <div className="whyLearnContent">
-          <Row>
-            <Col span={3}></Col>
-            <Col span={8}>
-              <div className="whylearnPicBox">
-                <div className="whylearnPic1" />
-                <div className="whylearnPicText">
-                  <p className="text1">
-                    特色一：家庭环境全英语交流
-                  </p>
-                  <p className="text2">
-                    外教不仅是授课老师，更是孩子的生活伙伴;
-                  </p>
+        {
+          scrollWidth >= 1400 ?
+          <div className="whyLearnContent">
+            <Row>
+              <Col span={4}></Col>
+              <Col span={7}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic1" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色一：家庭环境全英语交流
+                    </p>
+                    <p className="text2">
+                      外教不仅是授课老师，更是孩子的生活伙伴
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Col>
-            <Col span={2}></Col>
-            <Col span={8}>
-              <div className="whylearnPicBox">
-                <div className="whylearnPic2" />
-              </div>
-            </Col>
-            <Col span={3}></Col>
-          </Row>
-        </div>
+              </Col>
+              <Col span={2}></Col>
+              <Col span={7}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic2" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色二：全职外教上门授课
+                    </p>
+                    <p className="text2">
+                    与其把时间浪费在交通上，不如稳坐家中学习
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col span={4}></Col>
+            </Row>
+            <Row>
+              <Col span={4}></Col>
+              <Col span={7}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic3" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色三：社区熟人共享拼班
+                    </p>
+                    <p className="text2">
+                      性价比高，比传统培训机构实惠多多
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col span={2}></Col>
+              <Col span={7}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic4" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色四：精准匹配教材
+                    </p>
+                    <p className="text3">
+                      根据您的需求及兴趣智能匹配教材，量身定制，依据12个等级细分学习水平，精准提升
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col span={4}></Col>
+            </Row>
+          </div>
+          :
+          <div className="whyLearnContent">
+            <Row>
+              <Col span={3}></Col>
+              <Col span={18}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic1" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色一：家庭环境全英语交流
+                    </p>
+                    <p className="text2">
+                      外教不仅是授课老师，更是孩子的生活伙伴
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col span={3}></Col>
+            </Row>
+            <Row>
+              <Col span={3}></Col>
+              <Col span={18}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic2" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色二：全职外教上门授课
+                    </p>
+                    <p className="text2">
+                    与其把时间浪费在交通上，不如稳坐家中学习
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col span={3}></Col>
+            </Row>
+            <Row>
+              <Col span={3}></Col>
+              <Col span={18}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic3" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色三：社区熟人共享拼班
+                    </p>
+                    <p className="text2">
+                      性价比高，比传统培训机构实惠多多
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col span={3}></Col>
+            </Row>
+            <Row>
+              <Col span={3}></Col>
+              <Col span={18}>
+                <div className="whylearnPicBox">
+                  <div className="whylearnPic4" />
+                  <div className="whylearnPicText">
+                    <p className="text1">
+                      特色四：精准匹配教材
+                    </p>
+                    <p className="text4">
+                      根据您的需求及兴趣智能匹配教材，量身定制，依据12个等级细分学习水平，精准提升
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col span={3}></Col>
+            </Row>
+          </div>
+        }
       </div>
     )
   }
@@ -91,6 +202,7 @@ const mapStateToProps = (state) => ({
   carouselPic1: state.getIn(['home', 'carouselPic1']),
   carouselPic2: state.getIn(['home', 'carouselPic2']),
   carouselPic3: state.getIn(['home', 'carouselPic3']),
+  scrollWidth: state.getIn(['home', 'scrollWidth']),
 });
 
 const mapDispatchToProps = (dispatch) => {
