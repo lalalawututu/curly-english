@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2c2921a0.chunk.css",
+    "main.js": "/static/js/main.82273f67.chunk.js",
+    "main.js.map": "/static/js/main.82273f67.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2936372e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2936372e.js.map",
+    "static/js/2.8dc1f9c5.chunk.js": "/static/js/2.8dc1f9c5.chunk.js",
+    "static/js/2.8dc1f9c5.chunk.js.map": "/static/js/2.8dc1f9c5.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.5a60eddac69cd4eec8c5eeb5a9a25c3e.js": "/precache-manifest.5a60eddac69cd4eec8c5eeb5a9a25c3e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2c2921a0.chunk.css.map": "/static/css/main.2c2921a0.chunk.css.map",
+    "static/js/2.8dc1f9c5.chunk.js.LICENSE.txt": "/static/js/2.8dc1f9c5.chunk.js.LICENSE.txt",
+    "static/media/Abdul.jpg": "/static/media/Abdul.79388eab.jpg",
+    "static/media/Catherine.jpg": "/static/media/Catherine.eb6e6c51.jpg",
+    "static/media/Dusan.jpg": "/static/media/Dusan.9697ea31.jpg",
+    "static/media/Lee.jpg": "/static/media/Lee.0b2ead88.jpg",
+    "static/media/english-dad.png": "/static/media/english-dad.e5e3c86c.png",
+    "static/media/learnEnglish.png": "/static/media/learnEnglish.450eb816.png",
+    "static/media/logo.jpg": "/static/media/logo.75abbcc4.jpg",
+    "static/media/index.less": "/static/media/wy4.d5887433.png",
+    "static/media/teacher.png": "/static/media/teacher.3263e14b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2936372e.js",
+    "static/js/2.8dc1f9c5.chunk.js",
+    "static/css/main.2c2921a0.chunk.css",
+    "static/js/main.82273f67.chunk.js"
+  ]
+}
