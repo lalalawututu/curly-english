@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Row, Col } from 'antd';
-import { actionCreators } from './store';
 import './index.less';
 
 class Teacher extends PureComponent{
@@ -14,7 +13,10 @@ class Teacher extends PureComponent{
   render(){
     const {
       logo,
-      teacher1
+      teacher1,
+      teacher2,
+      teacher3,
+      teacher4,
      } = this.props
     return (
       <div className="teacherBox">
@@ -74,6 +76,75 @@ class Teacher extends PureComponent{
             </Col>
             <Col span={6} />
           </Row>
+          <Row>
+            <Col span={6} />
+            <Col span={12}>
+              <div className="teacherSBox">
+                <Row>
+                  <Col span={2} />
+                  <Col span={6}>
+                    <img src={teacher2} alt=""/>
+                  </Col>
+                  <Col span={2} />
+                  <Col span={12}>
+                    <div className="textIn">
+                      <p className="Name">Catherine.</p>
+                      <p className="country">美国</p>
+                      <p className="information">编剧专业，艺术表演专业，多年幼儿园教学经验，适合低龄段学员，持Tefl证书</p>
+                    </div>
+                  </Col>
+                  <Col span={2} />
+                </Row>
+              </div>
+            </Col>
+            <Col span={6} />
+          </Row>
+          <Row>
+            <Col span={6} />
+            <Col span={12}>
+              <div className="teacherSBox">
+                <Row>
+                  <Col span={2} />
+                  <Col span={6}>
+                    <img src={teacher3} alt=""/>
+                  </Col>
+                  <Col span={2} />
+                  <Col span={12}>
+                    <div className="textIn">
+                      <p className="Name">Lee.</p>
+                      <p className="country">英国</p>
+                      <p className="information">曼城大学英语文学专业，了解中国文化，TESOL国际认证教师，多年培训机构及幼儿园一线工作经验</p>
+                    </div>
+                  </Col>
+                  <Col span={2} />
+                </Row>
+              </div>
+            </Col>
+            <Col span={6} />
+          </Row>
+          <Row>
+            <Col span={6} />
+            <Col span={12}>
+              <div className="teacherSBox">
+                <Row>
+                  <Col span={2} />
+                  <Col span={6}>
+                    <img src={teacher4} alt=""/>
+                  </Col>
+                  <Col span={2} />
+                  <Col span={12}>
+                    <div className="textIn">
+                      <p className="Name">Abdul.</p>
+                      <p className="country">英国</p>
+                      <p className="information">Huddersfield大学旅游管理专业，旅行多个国家，喜爱并研究世界各民族文化</p>
+                    </div>
+                  </Col>
+                  <Col span={2} />
+                </Row>
+              </div>
+            </Col>
+            <Col span={6} />
+          </Row>
         </div>
       </div>
     )
@@ -81,7 +152,12 @@ class Teacher extends PureComponent{
 }
 
 const mapStateToProps = (state) => ({
+  logo: state.getIn(['header', 'logo']),
   teacher1: state.getIn(['teacher', 'teacher1']),
+  teacher2: state.getIn(['teacher', 'teacher2']),
+  teacher3: state.getIn(['teacher', 'teacher3']),
+  teacher4: state.getIn(['teacher', 'teacher4']),
+  scrollWidth: state.getIn(['home', 'scrollWidth']),
 });
 
 const mapDispatchToProps = (dispatch) => {

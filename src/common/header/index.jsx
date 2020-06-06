@@ -27,7 +27,6 @@ class Header extends PureComponent{
   }
 
   handleClick = e => {
-    console.log('click ', e);
     this.setState({
       current: e.key,
     });

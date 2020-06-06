@@ -36,7 +36,7 @@ class Home extends PureComponent{
     return (
       <div className="homeBox">
         <div className="kong"> 123  </div>
-        <Carousel autoplay autoplaySpeed={5000} dots={false} effect="fade" easing>
+        <Carousel autoplay autoplaySpeed={5000} dots={false} effect="fade" easing lazyLoad>
           <div>
             <img className="carouselPic" src={carouselPic1} alt=""/>
           </div>
