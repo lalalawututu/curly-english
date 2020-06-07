@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.01cf5c4f.chunk.css",
-    "main.js": "/static/js/main.98251e6e.chunk.js",
-    "main.js.map": "/static/js/main.98251e6e.chunk.js.map",
+    "main.css": "/static/css/main.3085ed98.chunk.css",
+    "main.js": "/static/js/main.22d1af3b.chunk.js",
+    "main.js.map": "/static/js/main.22d1af3b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6634a706.js",
     "runtime-main.js.map": "/static/js/runtime-main.6634a706.js.map",
     "static/js/2.b4dfde30.chunk.js": "/static/js/2.b4dfde30.chunk.js",
     "static/js/2.b4dfde30.chunk.js.map": "/static/js/2.b4dfde30.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.00e6a5eb550a5232f2879b3b58bbd601.js": "/precache-manifest.00e6a5eb550a5232f2879b3b58bbd601.js",
+    "precache-manifest.c253b831353f9c9d7d991c7d00994601.js": "/precache-manifest.c253b831353f9c9d7d991c7d00994601.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.01cf5c4f.chunk.css.map": "/static/css/main.01cf5c4f.chunk.css.map",
+    "static/css/main.3085ed98.chunk.css.map": "/static/css/main.3085ed98.chunk.css.map",
     "static/js/2.b4dfde30.chunk.js.LICENSE.txt": "/static/js/2.b4dfde30.chunk.js.LICENSE.txt",
-    "static/media/Abdul.jpg": "/static/media/Abdul.79388eab.jpg",
-    "static/media/Catherine.jpg": "/static/media/Catherine.eb6e6c51.jpg",
-    "static/media/Dusan.jpg": "/static/media/Dusan.9697ea31.jpg",
-    "static/media/Lee.jpg": "/static/media/Lee.0b2ead88.jpg",
-    "static/media/english-dad.png": "/static/media/english-dad.e5e3c86c.png",
-    "static/media/learnEnglish.png": "/static/media/learnEnglish.450eb816.png",
-    "static/media/logo.jpg": "/static/media/logo.75abbcc4.jpg",
-    "static/media/index.less": "/static/media/wy4.d5887433.png",
-    "static/media/teacher.png": "/static/media/teacher.3263e14b.png"
+    "static/media/Abdul.jpg": "/static/media/Abdul.753e49e8.jpg",
+    "static/media/Catherine.jpg": "/static/media/Catherine.a67d27d0.jpg",
+    "static/media/Dusan.jpg": "/static/media/Dusan.e616b449.jpg",
+    "static/media/Lee.jpg": "/static/media/Lee.1de303d0.jpg",
+    "static/media/english-dad.png": "/static/media/english-dad.7e621321.png",
+    "static/media/learnEnglish.png": "/static/media/learnEnglish.7c35e115.png",
+    "static/media/logo.jpg": "/static/media/logo.76b3c74d.jpg",
+    "static/media/index.less": "/static/media/wy4.8a7cda8a.png",
+    "static/media/teacher.png": "/static/media/teacher.5de4017b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6634a706.js",
     "static/js/2.b4dfde30.chunk.js",
-    "static/css/main.01cf5c4f.chunk.css",
-    "static/js/main.98251e6e.chunk.js"
+    "static/css/main.3085ed98.chunk.css",
+    "static/js/main.22d1af3b.chunk.js"
   ]
 }

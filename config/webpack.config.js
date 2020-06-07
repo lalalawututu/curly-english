@@ -363,10 +363,11 @@ module.exports = function(webpackEnv) {
             // },
             {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-              loader: 'image-webpack-loader',// 压缩图片
+              loader: require.resolve('url-loader'),
               options: {
-                bypassOnDebug: true,
-              }
+                limit: 10000,
+                name: 'static/media/[name].[hash:8].[ext]',
+              },
             },
             // Process application JS with Babel.
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
