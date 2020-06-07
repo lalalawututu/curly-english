@@ -14,6 +14,10 @@ class Home extends PureComponent{
     }
   }
 
+  componentWillReceiveProps() {
+    this.props.handleChangeScrollWidth(window.innerWidth)
+  }
+
   componentDidMount() {
     let that = this;
     window.addEventListener('load', function() {

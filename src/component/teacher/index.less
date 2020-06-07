@@ -84,12 +84,12 @@
       @keyframes outAmination {
         0% {box-shadow: 0 0 0 5 rgba(250, 140, 22, 0.8);}
         70% {box-shadow: 0 0 0 10px rgba(250, 140, 22, 0.6);}
-        100% {box-shadow: 0 0 0 40px rgba(250, 140, 22, 0.1);}
+        100% {box-shadow: 0 0 0 20px rgba(250, 140, 22, 0.1);}
       }
       @-webkit-keyframes outAmination {
         0% {box-shadow: 0 0 0 5 rgba(26, 112, 234 0.8);}
         70% {box-shadow: 0 0 0 10px rgba(250, 140, 22, 0.6);}
-        100% {box-shadow: 0 0 0 40px rgba(250, 140, 22, 0.1);}
+        100% {box-shadow: 0 0 0 20px rgba(250, 140, 22, 0.1);}
       }
       .textIn{
         display: inline-block;
@@ -122,6 +122,52 @@
           -moz-animation:outAmination 1s infinite; /* Firefox */
           -webkit-animation:outAmination 1s infinite; /* Safari and Chrome */
           -o-animation:outAmination 1s infinite; /* Opera */
+        }
+      }
+    }
+    .teacherSBoxMobile{
+      .ant-carousel{
+        width: 100%;
+        border-radius: 0.1rem;
+        overflow: hidden;
+        .slick-slide {
+          width: 100%;
+          text-align: center;
+          height: 9rem;
+          overflow: hidden;
+          img{
+            display: block;
+            margin: 0.3rem auto 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+          }
+          .textIn{
+            display: block;
+            height: 5rem;
+            margin: 0.4rem auto 0;
+            .Name{
+              color: #fa8c16;
+              font-size: 0.36rem;
+              line-height: 1;
+              margin-bottom: 0.08rem;
+              font-weight: bold;
+            }
+            .country{
+              margin-top: 0.4rem;
+              color: rgb(119, 119, 119);
+              line-height: 1.2;
+              font-size: 0.28rem;
+            }
+            .information{
+              width: 70%;
+              margin-top: 0.4rem;
+              margin: 0 auto;
+              color: black;
+              font-size: 0.26rem;
+              text-align: l;
+            }
+          }
         }
       }
     }

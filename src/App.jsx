@@ -13,7 +13,7 @@ class App extends PureComponent {
         <Fragment>
           <Header />
           {/* {this.props.match.path === this.props.location.path ?<Redirect to="/" /> : ''} */}
-          {/* <Redirect to="/" /> */}
+          <Redirect to="/" />
           <Route exact path="/" component={(props) => <Home { ...props } />} />
           <Route path="/teacher" component={(props) => <Teacher { ...props } />}></Route>
         </Fragment>
