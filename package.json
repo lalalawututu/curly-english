@@ -8,7 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.3.0",
-    "craco-less": "1.14.0",
+    "craco-less": "^1.14.0",
     "immutable": "^4.0.0-rc.12",
     "less-loader": "^5.0.0",
     "react": "^16.13.1",
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "image-webpack-loader": "^6.0.0"
   }
 }
