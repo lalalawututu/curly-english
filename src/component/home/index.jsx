@@ -36,21 +36,40 @@ class Home extends PureComponent{
       carouselPic3,
       scrollWidth
     } = this.props
-    console.log(scrollWidth)
     return (
       <div className="homeBox">
-        <div className="kong"> 123  </div>
-        <Carousel autoplay autoplaySpeed={5000} dots={false} effect="fade" easing lazyLoad>
-          <div>
-            <img className="carouselPic" src={carouselPic1} alt=""/>
+        <div className="kong" />
+        {
+          scrollWidth >= 1400 ?
+          <div className="PC">
+            <Carousel autoplay autoplaySpeed={5000} dots={false} effect="fade" easing lazyLoad>
+              <div>
+                <img className={scrollWidth <= 1400 ? 'carouselPic' : ''} src={carouselPic1} alt=""/>
+              </div>
+              <div>
+                <img className={scrollWidth <= 1400 ? 'carouselPic' : ''} src={carouselPic2} alt=""/>
+              </div>
+              <div>
+                <img className={scrollWidth <= 1400 ? 'carouselPic' : ''} src={carouselPic3} alt=""/>
+              </div>
+            </Carousel>
           </div>
-          <div>
-            <img className="carouselPic" src={carouselPic2} alt=""/>
+          :
+          <div className="mobile">
+            <Carousel autoplay autoplaySpeed={5000} dots={false} effect="fade" easing lazyLoad>
+              <div>
+                <img className={scrollWidth <= 1400 ? 'carouselPic' : ''} src={carouselPic1} alt=""/>
+              </div>
+              <div>
+                <img className={scrollWidth <= 1400 ? 'carouselPic' : ''} src={carouselPic2} alt=""/>
+              </div>
+              <div>
+                <img className={scrollWidth <= 1400 ? 'carouselPic' : ''} src={carouselPic3} alt=""/>
+              </div>
+            </Carousel>
           </div>
-          <div>
-            <img className="carouselPic" src={carouselPic3} alt=""/>
-          </div>
-        </Carousel>
+        }
+        
         <div className="whyLearn">
           <div className="whyLearnHead">
             <SmileFilled style={{position: 'relative', top: '0.04rem', fontSize : '0.36rem', margin: '0.22rem 0.2rem 0 0', color: '#75c25a'}}/>
